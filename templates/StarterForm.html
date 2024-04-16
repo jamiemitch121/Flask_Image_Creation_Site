@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>
+        Starter Form
+    </title>
+    <link rel="stylesheet" type="text/css" media="screen" href= "{{ url_for('static',filename='FForm.css') }}">
+    <script>function validateForm() {
+        let x = document.forms["form"]["fname"].value;
+        if (x == "") {
+          alert("Name must be filled out");
+          return false;
+        }
+      }
+      </script>
+</head>
+ 
+<body>
+    <div class="center">
+    <h1>Preliminary Research Form</h1>
+ 
+    <!-- Create Form -->
+    <form id="form" method="post">
+ 
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Age
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text" id="age" required
+                   placeholder="Enter your age" name="age" />
+        </div>
+ 
+ 
+        <div class="form-control">
+            <label>
+                Do you have any pre-existing thoughts on AI generated images?
+            </label>
+ 
+            <!-- Input Type Radio Button -->
+            <label for="thoughts-1">
+                <input type="radio" id="thoughts-1" value="yes"
+                       name="predisposition" required>Yes
+                  </input>
+            </label>
+            <label for="thoughts-2">
+                <input type="radio" id="thoughts-2" value="no"
+                       name="predisposition">No
+                  </input>
+            </label>
+        </div>
+
+
+        <div class="form-control">
+            <label>
+                If yes, how would you rate your view on AI generated images?<br>
+                <p style="font-size: small;"> With 5 being very positive and 1 being very negative</p>
+            </label>
+ 
+            <label for="rating-1">
+                1&nbsp
+                <input type="radio" id="rating-1" value="1"
+                       name="rating">
+                  </input>
+            </label>
+            <label for="rating-2">
+                2&nbsp
+                <input type="radio" id="rating-2" value="2"
+                       name="rating">
+                  </input>
+            </label>
+            <label for="rating-3">
+                3&nbsp
+                <input type="radio" id="rating-3" value="3"
+                           name="rating">
+                        </input>
+            </label>
+            <label for="rating-4">
+                4&nbsp
+                <input type="radio" id="rating-4" value="4"
+                           name="rating">
+                        </input>
+            </label>
+            <label for="rating-5">
+                5&nbsp
+                <input type="radio" id="rating-5" value="5"
+                           name="rating">
+                        </input>
+            </label>
+        </div>
+
+        
+ 
+        <div class="form-control">
+            <label for="comment">
+                Please enter your reasoning for your rating if rating was given:
+            </label>
+ 
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+                      placeholder="Enter your comment here"></textarea>
+        </div>
+ 
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+</div>
+</body>
+ 
+</html>

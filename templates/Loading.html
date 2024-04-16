@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+    function navigate() {
+      window.location.href = 'middleform';  // redirect when done!
+    }
+    fetch('processing').then(navigate); // load the slow url then navigate
+  </script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Loading</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href= "{{ url_for('static',filename='loader_sheet.css') }}" />
+  </head>
+  <body>
+    <ul class="loader">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <script>navigate</script>
+  </body>
+</html>

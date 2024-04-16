@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Research Questions
+    </title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static',filename='FForm.css') }}">
+    <script>function validateForm() {
+            let x = document.forms["form"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <div style="display: inline-block;">
+        <h1 style="font-size: 32px; font-family: Verdana">Images:</h1>
+        <figure><img src="{{ url_for('static', filename=route1) }}" alt="no picture"
+                style="height: 300px; width: auto;">
+            <figcaption style="font-size: 25px;">Human-made Image</figcaption>
+        </figure>
+        <figure><img src="{{ url_for('static', filename=route2) }}" alt="no picture"
+                style="height: 300px; width: auto;">
+            <figcaption style="font-size: 25px;">Generated Image</figcaption>
+        </figure>
+    </div>
+    <div class=center>
+        <h1>Research Questions:</h1>
+        <form id="form" method="post">
+
+
+            <div class="form-control">
+                <label>
+                    Which image do you prefer?<br>
+                </label>
+                <label for="prefer?-1">
+                    <input type="radio" id="prefer-1" value="first" name="prefer" required>Human-made
+                    </input>
+                </label>
+                <label for="prefer-2">
+                    <input type="radio" id="prefer-2" value="Second" name="prefer">Generated image
+                    </input>
+                </label>
+
+                <div class="form-control">
+                    <label>
+                        How much do you like the Human-made image?
+                    </label>
+
+                    <div style="display: inline-block;">
+                        <label for="Like-1">
+                            <input type="radio" id="Like-1" value="1" name="Like" required>1
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="Like-2">
+                            <input type="radio" id="Like-2" value="2" name="Like">2
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="Like-3">
+                            <input type="radio" id="Like-3" value="3" name="Like">3
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="Like-4">
+                            <input type="radio" id="Like-4" value="4" name="Like">4
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="Like-5">
+                            <input type="radio" id="Like-5" value="5" name="Like">5
+                            </input>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-control">
+                    <label>
+                        How profound do you think the Human-made image is?
+                    </label>
+
+                    <div style="display: inline-block;">
+                        <label for="Profudity-1">
+                            <input type="radio" id="Profudity-1" value="1" name="Profudity" required>1
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="Profudity-2">
+                            <input type="radio" id="Profudity-2" value="2" name="Profudity">2
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="Profudity-3">
+                            <input type="radio" id="Profudity-3" value="3" name="Profudity">3
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="Profudity-4">
+                            <input type="radio" id="Profudity-4" value="4" name="Profudity">4
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="Profudity-5">
+                            <input type="radio" id="Profudity-5" value="5" name="Profudity">5
+                            </input>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-control">
+                    <label>
+                        How beautiful do you think the Human-made image is?
+                    </label>
+
+                    <div style="display: inline-block;">
+                        <label for="Beautiful-1">
+                            <input type="radio" id="Beautiful-1" value="1" name="Beautiful" required>1
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="Beautiful-2">
+                            <input type="radio" id="Beautiful-2" value="2" name="Beautiful">2
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="Beautiful-3">
+                            <input type="radio" id="Beautiful-3" value="3" name="Beautiful">3
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="Beautiful-4">
+                            <input type="radio" id="Beautiful-4" value="4" name="Beautiful">4
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="Beautiful-5">
+                            <input type="radio" id="Beautiful-5" value="5" name="Beautiful">5
+                            </input>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-control">
+                    <label>
+                        How much do you like the Generated image?
+                    </label>
+
+                    <div style="display: inline-block;">
+                        <label for="LikeG-1">
+                            <input type="radio" id="LikeG-1" value="1" name="LikeG" required>1
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="LikeG-2">
+                            <input type="radio" id="LikeG-2" value="2" name="LikeG">2
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="LikeG-3">
+                            <input type="radio" id="LikeG-3" value="3" name="LikeG">3
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="LikeG-4">
+                            <input type="radio" id="LikeG-4" value="4" name="LikeG">4
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="LikeG-5">
+                            <input type="radio" id="LikeG-5" value="5" name="LikeG">5
+                            </input>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-control">
+                    <label>
+                        How profound do you think the generated image is?
+                    </label>
+
+                    <div style="display: inline-block;">
+                        <label for="ProfudityG-1">
+                            <input type="radio" id="ProfudityG-1" value="1" name="ProfudityG" required>1
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="ProfudityG-2">
+                            <input type="radio" id="Profudity-2G" value="2" name="ProfudityG">2
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="ProfudityG-3">
+                            <input type="radio" id="ProfudityG-3" value="3" name="ProfudityG">3
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="ProfudityG-4">
+                            <input type="radio" id="ProfudityG-4" value="4" name="ProfudityG">4
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="ProfudityG-5">
+                            <input type="radio" id="ProfudityG-5" value="5" name="ProfudityG">5
+                            </input>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-control">
+                    <label>
+                        How beautiful do you think the Human-made image is?
+                    </label>
+
+                    <div style="display: inline-block;">
+                        <label for="BeautifulG-1">
+                            <input type="radio" id="BeautifulG-1" value="1" name="BeautifulG" required>1
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="BeautifulG-2">
+                            <input type="radio" id="BeautifulG-2" value="2" name="BeautifulG">2
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="BeautifulG-3">
+                            <input type="radio" id="BeautifulG-3" value="3" name="BeautifulG">3
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="BeautifulG-4">
+                            <input type="radio" id="BeautifulG-4" value="4" name="BeautifulG">4
+                            </input>
+                        </label>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="BeautifulG-5">
+                            <input type="radio" id="BeautifulG-5" value="5" name="BeautifulG">5
+                            </input>
+                        </label>
+                    </div>
+                </div>
+
+
+
+                <button type="submit" value="submit">
+                    Submit
+                </button>
+        </form>
+    </div>
+    <div style="display: inline-block;"></div>
+</body>
+
+</html>
